@@ -9,7 +9,7 @@ def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
     logger.warning(
-        'This is a warning!',
+        'This is a warning sample!',
         exc_info=True
     )
     return render(request, 'exemplo/index.html', context)
